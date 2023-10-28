@@ -13,15 +13,17 @@
       <option value="Male">Male</option>
       <option value="Female">FeMale</option>
     </select>
-    <button onclick="click()">Apply</button>
+    <button id="btn">Apply</button>
 </body>
 </html>
 <script>
-    let display = document.getElementById("display");
-    let name = document.getElementById("name");
-    let gender=document.getElementById("gender")
-    function click(){
-        display.innerText = name.value
+    let btn=document.getElementById("btn")
+    function dom(){
+      let display = document.getElementById("display");
+      let name = document.getElementById("name");
+      let gender=document.getElementById("gender")
+      display.textContent = name.value + " " + gender.value
     }
-    // display.innerText = inp;
+    btn.addEventListener("click",dom);
+    
 </script>
