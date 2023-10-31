@@ -1,0 +1,36 @@
+.main{
+    width: 450px;
+    height: 600px;
+    backgrou nd-color: rgb(143, 143, 143);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    margin: auto;
+}
+input{
+    width: 80%;
+    border: none;
+    outline: none;
+    height: 60px;
+    margin: auto;
+    font-size: 1.8rem;
+    margin: 35px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(168, 156, 156, 0.25) 0px 54px 55px, rgba(188, 157, 157, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.btns{
+    width: 380px;
+    height: 100%;
+    margin: auto;
+}
+button{
+    /* padding: 30px; */
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin: 10px;
+    border: none;
+    width: 70px;
+    height: 70px;
+
+    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+}
