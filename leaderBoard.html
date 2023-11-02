@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inputs{
+            display: flex;
+            height: auto;
+            width: 930px;
+            justify-content: space-between;
+        }
+        #inp1,#inp2{
+            background-color: red;
+            width: 150px;
+            height: 150px; 
+            padding: 10px;
+            font-size: 3rem;
+            border: 3px solid black;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            outline: none;
+        }
+        h2{
+            margin: 0;
+            text-align: center;
+            font-size: 2rem;
+        }
+        #inp2{
+            background-color: green;
+        }
+        .main{
+            width: 930px;
+            background-color: red;
+            height: auto;
+            font-size: 1.6rem;
+            
+            text-align: center;
+        }
+        #inp3{
+            width: 300px;
+            height: 50px;
+            font-size: 2rem;
+            padding: 20px;
+            border: 3px solid black;
+            outline: none;
+        }
+        .first button{
+            width: 80px;
+            height: 80px;
+            margin: 20px;
+            font-size: 2rem;
+        }
+        .first .enter{
+            width: 370px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="inputs">
+        <div>
+            <input type="text" id="inp1">
+            <h2>MIN</h2>
+        </div>
+        <div>
+            <input type="text" id="inp2">
+            <h2>MAX</h2>
+        </div>
+    </div>
+
+    <div class="main">
+        <h1>Score</h1>
+        <input type="text" id="inp3">
+        <div class="first">
+            <button id="btn">1</button>
+            <button id="btn">2</button>
+            <button id="btn">3</button>
+        </div>
+        <div class="first">
+            <button id="btn">4</button>
+            <button id="btn">5</button>
+            <button id="btn">6</button>
+        </div>
+        <div class="first">
+            <button id="btn">7</button>
+            <button id="btn">8</button>
+            <button id="btn">9</button>
+        </div>
+        <div class="first">
+            <button id="btn">0</button>
+            
+        </div>
+        <div class="first">
+            <button class="enter">ENTER</button>
+            
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    let btn = document.querySelectorAll("#btn")
+    let display = document.querySelector("#inp3");
+    let inp1 = document.
+    let bag=""
+    for(let i=0;i<btn.length;i++){
+            btn[i].addEventListener('click',function(){
+                bag+=btn[i].innerText
+                display.value = bag
+        })
+    }
+
+</script>

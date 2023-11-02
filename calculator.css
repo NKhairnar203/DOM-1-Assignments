@@ -31,6 +31,17 @@ button{
     border: none;
     width: 70px;
     height: 70px;
-
+    cursor: pointer;
     box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+}
+#clr{
+    height: auto;
+    width: 300px;
+    border-radius: 10px;
+    margin-left: 40px;
+    background-color: rgb(236, 169, 169);
+}
+#clr:hover{
+    background-color: rgb(236, 136, 136);
+    cursor: pointer;
 }

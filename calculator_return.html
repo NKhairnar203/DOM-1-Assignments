@@ -9,33 +9,61 @@
 <body>
     <h1>calculator</h1>
     <div class="main">
-        <input type="text">
+        <input type="number" >
         <div class="btns">
-            <button>9</button>
-            <button>8</button>
-            <button>7</button>
-            <button>+</button>
-            <button>6</button>
-            <button>5</button>
-            <button>4</button>
+            <button onclick="appendToDisplay('9')">9</button> 
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button id="plus" onclick="plus()">+</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('4')">4</button>
             <button>-</button>
-            <button>3</button>
-            <button>2</button>
-            <button>1</button>
+            <button  onclick="appendToDisplay('3')">3</button>
+            <button  onclick="appendToDisplay('2')">2</button>
+            <button  onclick="appendToDisplay('1')">1</button>
             <button>*</button>
-            <button>=</button>
+            <button onclick="equal()">=</button>
             <button>0</button>
             <button>.</button>
             <button>/</button>
+            <button id="clr">clear</button>
         </div>
-        
     </div>
 </body>
 </html>
-<script>
-    let btns= document.querySelectorAll("button");
-    let inp = document.getElementsByTagName("input")
-    inp.addEventListener("click",function(){
-        inp.value = btns.innerText
+<script> 
+
+    let ans = ""
+    let arr = []
+    let input = document.querySelector("input")
+    function appendToDisplay(a){
+        ans = ans + a
+        console.log(ans)
+        input.value = ans
+    }
+
+    function plus(a){
+        arr.push(ans)
+        ans = ""
+
+        console.log(arr)
+    }
+    
+    
+    function equal(){
+        let sum=0
+        for(let i=0;i<arr.length;i++){
+            sum=sum + Number(arr[i]);
+        }
+        input.value = sum
+    }
+    
+    let clr = document.querySelector("#clr")
+    clr.addEventListener("click",function(){
+        input.value= "0"
+    
     })
+    
+    
 </script> 
