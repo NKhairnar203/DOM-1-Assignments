@@ -16,10 +16,10 @@
             width: 150px;
             height: 150px; 
             padding: 10px;
-            font-size: 3rem;
+            font-size: 2.5rem;
+            color: white;
             border: 3px solid black;
             text-align: center;
-            color: rgb(0, 0, 0);
             outline: none;
         }
         h2{
@@ -32,7 +32,7 @@
         }
         .main{
             width: 930px;
-            background-color: red;
+            background-color: rgb(0, 140, 255);
             height: auto;
             font-size: 1.6rem;
             
@@ -103,13 +103,40 @@
 <script>
     let btn = document.querySelectorAll("#btn")
     let display = document.querySelector("#inp3");
-    let inp1 = document.
-    let bag=""
+    let inp2 = document.querySelector("#inp2")
+    let inp1 = document.querySelector("#inp1")
+    let enter = document.querySelector(".enter")
+    let bag="" //Store input value
+
+    
+    inp2.value = 2019 //as it is value 2019
     for(let i=0;i<btn.length;i++){
             btn[i].addEventListener('click',function(){
                 bag+=btn[i].innerText
                 display.value = bag
         })
     }
+    
+    enter.addEventListener("click",function(){
+        // inp1.value=""
+        if(Number(bag) < inp2.value){
+            inp1.value = Number(bag)
+            console.log("the value greater")
+        }
+        else if(Number(bag) > inp2.value){
+            inp1.value=inp2.value
+            inp2.value = Number(bag)
+
+            console.log("the value small")
+        }
+
+        display.value=""
+        bag=""
+    })
+
+
+
+
+
 
 </script>
