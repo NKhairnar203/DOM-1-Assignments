@@ -18,4 +18,44 @@
         let ans = document.getElementById("he1");
         console.log(ans.innerText())
     }
+
+//cal
+
+
+
+    let ans = ""
+    let arr = []
+    let input = document.querySelector("input")
+    function appendToDisplay(a){
+        ans = ans + a
+        console.log(ans)
+        input.value = ans
+    }
+
+    function plus(a){
+        arr.push(ans)
+        ans = ""
+        console.log(arr)
+    }
+    function div(a){
+        arr.push()
+    }
+    
+    function equal(){
+        let sum=0
+        for(let i=0;i<arr.length;i++){
+            sum=sum + Number(arr[i]);
+        }
+        input.value = sum
+    }
+    
+    let clr = document.querySelector("#clr")
+    clr.addEventListener("click",function(){
+        input.value= "0"
+    
+    })
+
+
+
+
 </script>

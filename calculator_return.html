@@ -9,61 +9,72 @@
 <body>
     <h1>calculator</h1>
     <div class="main">
-        <input type="number" >
+        <input type="text" id="input" disabled>
         <div class="btns">
-            <button onclick="appendToDisplay('9')">9</button> 
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('7')">7</button>
-            <button id="plus" onclick="plus()">+</button>
-            <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('4')">4</button>
-            <button>-</button>
-            <button  onclick="appendToDisplay('3')">3</button>
-            <button  onclick="appendToDisplay('2')">2</button>
-            <button  onclick="appendToDisplay('1')">1</button>
-            <button>*</button>
-            <button onclick="equal()">=</button>
-            <button>0</button>
-            <button>.</button>
-            <button>/</button>
+            <button id="btn">9</button>
+            <button id="btn">8</button>
+            <button id="btn">7</button>
+            <button id="plus">+</button>
+            <button id="btn">6</button>
+            <button id="btn">5</button>
+            <button id="btn">4</button>
+            <button id="minus" >-</button>
+            <button id="btn">3</button>
+            <button id="btn">2</button>
+            <button id="btn">1</button>
+            <button id="multi">*</button>
+            <button id="equal">=</button>
+            <button id="btn">0</button>
+            <button id="dot">.</button>
+            <button id="div">/</button>
             <button id="clr">clear</button>
         </div>
     </div>
 </body>
 </html>
 <script> 
-
-    let ans = ""
-    let arr = []
-    let input = document.querySelector("input")
-    function appendToDisplay(a){
-        ans = ans + a
-        console.log(ans)
-        input.value = ans
+    let btns = document.querySelectorAll("#btn")
+    let input = document.querySelector("#input")
+    let add = document.querySelector("#plus")
+    let equal = document.querySelector("#equal")
+    let mul = document.querySelector("#multi")
+    let arr=[]
+    
+    let bag=""
+    for(let i=0;i<btns.length;i++){
+        btns[i].addEventListener('click',function(){
+            bag+=btns[i].innerText
+            input.value = bag
+            console.log(bag)
+        })
     }
 
-    function plus(a){
-        arr.push(ans)
-        ans = ""
-
+    add.addEventListener('click',function(){
+        arr.push(bag)
+        bag=""
+        input.value= "+"
         console.log(arr)
-    }
-    
-    
-    function equal(){
-        let sum=0
-        for(let i=0;i<arr.length;i++){
-            sum=sum + Number(arr[i]);
-        }
-        input.value = sum
-    }
-    
-    let clr = document.querySelector("#clr")
-    clr.addEventListener("click",function(){
-        input.value= "0"
-    
+    })
+    multi.addEventListener('click',function(){
+        arr.push(bag)
+        bag=""
+        input.value= "*"
+        console.log(arr)
     })
     
     
+    equal.addEventListener('click',function(){
+        let sum = arr.reduce((acc,cu) => acc+Number(cu) ,0)
+
+        console.log(sum)
+        input.value = sum
+        arr = []
+
+        let sum1 = arr.reduce((acc,cu) => acc*Number(cu) ,1)
+        
+        console.log(sum1)
+        input.value = sum1
+        arr = []
+        
+    })
 </script> 
