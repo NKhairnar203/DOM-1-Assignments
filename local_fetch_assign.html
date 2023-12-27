@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            
+        }
+        form{
+            margin: auto;
+            width: 20%;
+            height: 400px;
+            background-color: rgb(223, 208, 135);
+            text-align: center;
+            padding-top:20px ;
+            font-size: 1.4rem;
+        }
+        h3{
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        input{
+            padding: 10px;
+            font-size: 1.2rem;
+        }
+        button{
+            padding: 10px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: red;
+            
+        }
+        div{
+            margin: auto;
+            width: 70%;
+            text-align: center;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="">
+            <h3>Enter a userName: </h3>
+            <input type="text" name="" id="inp1">
+            <h3>Enter a UserAge:</h3>
+            <input type="text" name="" id="inp2">
+            <br><br>
+            <input type="submit" value="Submit">
+            <button id="btn">Display data</button>
+            
+        </form>
+        <div class="display">
+            <h2>Display User Data:</h2>
+        </div>
+    </main>
+</body>
+
+</html>
+
+<script>
+  
+    let input1 = document.querySelector("#inp1")
+    let input2 = document.querySelector("#inp2")
+    let form = document.querySelector("form")
+    let body = document.querySelector("body");
+    let btn = document.getElementById("btn")
+    let display = document.querySelector(".display")
+    
+    form.addEventListener('submit', function () {
+        event.preventDefault()
+        localStorage.setItem('key', 'value');
+        let data=[];
+        let UserInfo = `UserName:-[ ${input1.value} ] And UserAge:- [ ${input2.value} ]`
+        data.push(UserInfo);
+        localStorage.setItem('userData', JSON.stringify(data));
+        console.log(data)
+    })
+
+    btn.addEventListener("click",()=>{
+        let storedData = JSON.parse(localStorage.getItem('userData'));
+        console.log(storedData); 
+        let h1 = document.createElement("h1");
+        h1.innerText = storedData;
+        display.append(h1)
+        body.append(display)
+        
+    })
+   
+
+
+</script>
