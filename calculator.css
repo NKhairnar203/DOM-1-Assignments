@@ -1,47 +1,51 @@
-.main{
-    width: 450px;
-    height: 600px;
-    backgrou nd-color: rgb(143, 143, 143);
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    margin: auto;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
 }
-input{
-    width: 80%;
-    border: none;
-    outline: none;
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #e3f9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calculator{
+    background-color: #3a4452;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.calculator form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    font-size: 1.2rem;
+    font-weight: 600;
     height: 60px;
-    margin: auto;
-    font-size: 1.8rem;
-    margin: 35px;
-    padding: 10px;
     border-radius: 10px;
-    box-shadow: rgba(168, 156, 156, 0.25) 0px 54px 55px, rgba(188, 157, 157, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.btns{
-    width: 380px;
-    height: 100%;
-    margin: auto;
-}
-button{
-    /* padding: 30px; */
-    font-size: 1.5rem;
-    border-radius: 50%;
+    box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0,0.2);
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
     margin: 10px;
-    border: none;
-    width: 70px;
-    height: 70px;
-    cursor: pointer;
-    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
 }
-#clr{
-    height: auto;
-    width: 300px;
-    border-radius: 10px;
-    margin-left: 40px;
-    background-color: rgb(236, 169, 169);
+
+form .display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+
 }
-#clr:hover{
-    background-color: rgb(236, 136, 136);
-    cursor: pointer;
+form .display input{
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+}
+#equal{
+    width: 145px;
 }
