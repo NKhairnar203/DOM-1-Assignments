@@ -1,0 +1,90 @@
+* {
+     padding: 0;
+     margin: 0;
+}
+
+body {
+     font-family: sans-serif;
+     background-color: #202124;
+}
+
+h1 {
+     text-align: center;
+     color: red;
+     padding: 5px;
+}
+
+h2 {
+     text-align: center;
+     font-weight: 700;
+     padding: 5px;
+     color: white;
+}
+
+#form {
+     /* border: 2px solid green; */
+     height: auto;
+     width: 85%;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     padding: 20px;
+     margin: 20px auto;
+     justify-content: space-between;
+}
+
+#form>div {
+     /* border: 1px solid red; */
+     padding: 20px;
+     margin: 10px;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
+
+#form>div>div {
+     border: 1px solid goldenrod;
+     text-align: center;
+     padding: 10px;
+     margin: 10px;
+     border-radius: 30px;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.foodImg>img {
+     text-align: center;
+     justify-content: center;
+     margin: 50px 10% 20px 10%;
+     height: 45%;
+     width: 80%;
+     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}
+
+.foodImg>p {
+     text-align: center;
+     font-size: 22px;
+     font-weight: 700;
+}
+
+.proImg>div>img {
+     height: 100px;
+}
+
+p {
+     color: red;
+     margin: 5px;
+}
+
+span {
+     font-weight: 600;
+     color: white;
+}
+
+#submit {
+     justify-content: center;
+     margin: 15px auto;
+     font-size: 20px;
+     border: 1px solid red;
+     text-align: center;
+     width: 50%;
+     height: 38px;
+     color: blue;
+     background-color: white;
+     border-radius: 30px;
+}
